@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cornell Book Share</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+	</head>
+	<body>
+		<!-- Function to create an alert for submkt button-->
+		<script type="text/javascript">
+			function respond() { 
+			var var1 = form1.bookname.value;
+			alert("You have searched for " + var1);
+				
+			}
+		</script>
+		<!-- The header Element-->
+		<div id="header">
+
+			<p>
+				<a href="index.html">
+				<img src="Media_Files/THESECONDBOOKSTORE.png" alt="Cornell Book Share" width = "1000"  height="160" >
+				</a>
+			</p>
+			<ul>
+	  			<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="books.html">Buy Books</a></li>
+				<li><a href="service.html">Services</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+			</div>
+			<div id="content">
+			<p>
+				<img src="Media_Files/books2.png" alt="BOOKS" width = "500"  height="130">
+			</p>
+			<form id="form1" action="" method="get" onsubmit="respond()">
+			<p class="bold">Search for Books
+				<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+				<!--<input type="Submit" name="search" value="Search">-->
+			</p>
+			</form>
+			<h2>Editor's Picks for the Month: </h2>
+			<!-- Table showing best selling books of the month -->
+			<table id="myTable">
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Price</th>
+					<th>Availability</th>
+				</tr>
+				<tr>
+					<td>Biomaterials Science: An Introduction to Materials in Medicine</td>
+					<td>William R Wagner, Shelly E. Sakiyama-Elbert, et al.</td>
+					<td>$175.00</td>
+					<!-- Adding Hyperlink to the book. Currently links to Amazon page but intention isto show book page in the website itself -->
+					<td><a href="match.html" target="_blank">Available</a></td>
+
+				</tr>
+				<tr>
+					<td>Practical Electronics for Inventors, Fourth Edition</td>
+					<td> Paul Scherz and Simon Monk</td>
+					<td>$18.00</td>
+					<td><a href="match.html" target="_blank">Available</td>
+
+				</tr>
+				<tr>
+					<td>Digital Marketing Strategy: An Integrated Approach to Online Marketing</td>
+					<td>Simon Kingsnorth</td>
+					<td>$31.80</td>
+					<td><a href="match.html" target="_blank">Available</td>
+				</tr>
+				<tr>
+					<td>Engineers' Practical Databook: A Technical Reference Guide for Students and Professionals</td>
+					<td>Jay Smith</td>
+					<td>$14.80</td>
+					<td><a href="match.html" target="_blank">Available</td>
+				</tr>
+				<tr>
+					<td>A Textbook of Accounting for Management, 3rd Edition</td>
+					<td> S.N. Maheshwari</td>
+					<td>$13.99</td>
+					<td><a href="match.html" target="_blank">Available</td>
+				</tr>							
+			</table>
+			<br>
+			<br>
+		</div>
+		<!-- The footer Element-->
+		<div id="footer">	
+			<table style="width: 100%">
+				<tr>
+					<td text align: right>
+			© 2020 Cornell Book Share
+					</td>
+					<td text-align:center>
+			Contact Us <br> Ph:123-456-7890 <br> Email:books@cornellbookshare.org
+					</td>
+
+					<td text-align:left>
+			Cornell Book Share <br> 1234 ABC Street <br> Ithaca NY 98765
+					</td>
+				</tr>
+			</table>
+			</p>
+		</div>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cornell Book Share</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Function to swap images on hovering over the image-->
+		<script>
+			function hover_in() {document.services1.src='Media_Files/repair.jpg';}
+			function hover_out() {document.services1.src='Media_Files/shelf.jpg';}
+
+		</script>
+	</head>
+	<body>
+		<!--Create an alert for the selected service -->
+		<script type="text/javascript">
+			function respond() { 
+			var var1 = form2.services.value;
+			alert("You have selected " + var1);
+				
+			}
+		</script>
+		<!-- The header Element-->
+		<div id="header">
+			<p>
+				<a href="index.html">
+				<img src="Media_Files/THESECONDBOOKSTORE.png" alt="Cornell Book Share" width = "1000"  height="160" >
+				</a>
+			</p>
+			<ul>
+	  			<li><a href="index.html">Home</a></li>
+				<li><a href="books.html">Buy/Share Books</a></li>
+				<li><a class="active" href="service.html">Services</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<p>
+				<img src="Media_Files/shelf.jpg" name="services1" alt="BOOK SERVICES" onmouseover="hover_in()" onmouseout="hover_out()" width = "300"  height="200">
+			</p>
+			<form id ="form2" action="" method="get" onsubmit="respond()">
+			<p class="bold">Select the services you are looking for </p>
+				<input type="radio" name="services" value="Book Buy" />Book Buy
+				<input type="radio" name="services" value="Book Share" /> Book Share
+				<input type="radio" name="services" value="Book Sell" /> Book Sell
+			</p>
+			<p>
+				<input type="submit" name="submit" value="Submit"> 
+			</p>
+			</form>
+			<p><h3>
+					Music of the week
+			</h3></p>
+			<p>
+			<audio src="Media_Files/reading.mp3" width="100" height="80" controls preload>
+				This browser can't play the audio file
+			</audio>
+			</p>
+	
+		</div>
+		<!-- The footer Element-->
+		<div id="footer">	
+			<table style="width: 100%">
+				<tr>
+					<td text align: right>
+			© 2020 Cornell Book Share
+					</td>
+					<td text-align:center>
+			Contact Us <br> Ph:123-456-7890 <br> Email:books@cornellbookshare.org
+					</td>
+
+					<td text-align:left>
+			Cornell Book Share <br> 1234 ABC Street <br> Ithaca NY 98765
+					</td>
+				</tr>
+			</table>
+			</p>
+		</div>
+	</body>
+</html>
