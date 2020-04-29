@@ -1,6 +1,6 @@
 /*Set Background Image and font style*/
 body {
-  background-image: url("Media_Files/clouds.jpeg");
+  background-color: #E6E6FA;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     }
 
@@ -30,7 +30,7 @@ ul {
 
 li {
   float: left;
-  width: 25%  ;
+  width: 20%  ;
   }
 
 li a {
@@ -84,6 +84,13 @@ th {
 	clear: both;
 	text-align: center;
 	padding: 1px;
+	min-height: 100%;
+	width: 100%
+	}
+#leftal	{	
+	clear: both;
+	text-align: left;
+	padding: 15px;
 	min-height: 100%;
 	width: 100%
 	}
